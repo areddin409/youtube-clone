@@ -7,7 +7,6 @@ import { Videos, Sidebar } from "./";
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [videos, setVideos] = useState([]);
-  console.log(`🚀 ~ file: Feed.jsx ~ line 10 ~ Feed ~ videos`, videos);
 
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
